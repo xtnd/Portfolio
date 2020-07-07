@@ -35,7 +35,7 @@ $(document).ready(function(){
             document.getElementById('error').innerHTML = 'Valid'; 
             return true;
         } else{ 
-            document.getElementById('error').innerHTML = 'Email is Not Valid. Must be in format name@domain.com'; 
+            document.getElementById('error').innerHTML = 'Email is Not Valid. Please try again.'; 
             return false;
         }
 

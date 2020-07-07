@@ -1,5 +1,6 @@
 
 $(document).ready(function() { 
+  document.getElementById('didYouAddQUote').style.display = "none";
     var quotes = [{
         'quote': 'Always code as if the guy who maintains your code will be a violent psychopath who knows where you live',
         'by': 'My Professor',
@@ -12,6 +13,31 @@ $(document).ready(function() {
       }]
    
     
+          var textboxQuote = document.getElementById('addYourOwnQuoteCheckbox');
+
+      document.getElementById('addQuote').addEventListener("click", function(){
+            
+          if(textboxQuote.value != "") {
+              
+              var length = quotes.length;
+                quotes.push( {quote: document.getElementById('addYourOwnQuoteCheckbox').value, by: "Created via test app"});
+                
+              if(length != quotes.length) {
+                  document.getElementById('didYouAddQUote').style.display = "block";
+                  $("#text").html("\" " + quotes[quotes.length-1].quote + " \"");
+                  $("#author").html("- " + quotes[quotes.length-1].by);
+              }
+                           
+          }
+            
+      });
+
+      document.getElementById('addYourOwnQuoteCheckbox').addEventListener("focus", function(){
+        document.getElementById('didYouAddQUote').style.display = "none";
+      });
+
+      
+
     //generates a random quote from 0-length of arrary.
     $( "#test" ).click(function() {
         number = Math.floor(Math.random() * quotes.length);
