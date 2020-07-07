@@ -9,9 +9,10 @@ $(document).ready(function(){
             $.getJSON(url, function(data){
 
               $("#temp").html('<img src="' + data.weather[0].icon + '">' + data.main.temp + " degrees");
-              $("#btn1").append(data.name + ", " + data.sys.country);
+              $("#btn1").html("<p>" + data.name + ", " + data.sys.country + "</p>");
               $("#btn2").html("<p>" + data.weather[0].description + "</p>");
               $("#btn3").html("<p> Wind speed is: " + data.wind.speed + "</p>");
+              
               
             });
         });

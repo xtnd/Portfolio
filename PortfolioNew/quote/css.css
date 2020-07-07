@@ -44,3 +44,11 @@ p{
     padding-left: 10px;
 }
 
+#addYourOwnQuoteCheckbox {
+    height: 50px;
+    position: relative;
+    top: 25px;
+
+}
+
+

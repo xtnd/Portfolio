@@ -9,18 +9,28 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="css.css" type="text/css" rel="stylesheet">
-
 </head>
 
 <body>
 <div class="container">
     <div class="header">
         <h1>Random Quote Generator</h1>
-        <p>Here are some random quotes I had collected during my school. I recently discoverd via the wayback machine. I hope you enjoy them!</p>
+        <p>Here are some random quotes I had collected during my school.</p>
+
+        
 
         <button class="btn btn-primary" id="test">New quote!</button>
-       <a class="twitterButton"><button class="btn btn-primary" id="tweet">Tweet it<i class="fa fa-twitter"></button></i></a>
-       
+        <a class="twitterButton"><button class="btn btn-primary" id="tweet">Tweet it<i class="fa fa-twitter"></button></i></a>
+     
+    </div>
+
+    <div class="addYourOwnQuote">
+      
+      <h1>Want to add your own quote? Add it inside the textbox and click Add!</h1>
+      <div>
+        <input type="textbox" id="addYourOwnQuoteCheckbox"><button class="btn btn-primary" id="addQuote">Add</button>
+      </div>
+      <p id="didYouAddQUote">Quote Added.</p>
     </div>
 
     <div class="quotes">
@@ -30,22 +40,11 @@
         </div>
     </div>
     <hr>
-    <p>Coded by <a href="https://www.github.com/xtnd">Kody Scharf</a></p>
+    <p>Coded by <a href="https://www.linkedin.com/in/kody-scharf-311b1a60/">Kody Scharf</a></p>
     
 
     
 </div>
-<script>
- var quotes = [{
-        'quote': 'Always code as if the guy who maintains your code will be a violent psychopath who knows where you live',
-        'by': 'My Professor',
-      }, {
-        'quote': 'Everyone should learn how to code. It teachs you how to think.',
-        'by': 'Steve Jobs',
-      }, {
-        'quote': 'Any fool can write code thar a computer can understand. Good programmers write code that humans can understand.',
-        'by': 'John Johnson',
-      }]
-</script>
+
 </body>
 </html>
